@@ -38,7 +38,7 @@ def getIscEventCatalog(startDateTime, endDateTime, EventSrcmod, catalogType):
     df = df[(df.magnitude.notnull()) & (df.depth.notnull()) & (df.latitude.notnull()) & (df.longitude.notnull()) & (df.magnitude_type.notnull()) & (df.magnitude_author.notnull())]
 
     #make sure UTM works
-    df = df[(df.latitude < 84) & (df.latitude > -84)]
+    df = df[(df.latitude < 84) & (df.latitude > -80)]
     df = df[(df['depth']<>0.0)]
 
     # time filtering
